@@ -32,7 +32,7 @@ namespace ConsoleApp
             { 
                 Console.WriteLine("Hello World!");
 
-                Stock stock = Controllers.StockPriceController.GetStockPriceById(3).Result;
+                Stock stock = Controllers.StockPriceController.GetStockPriceByIdAsync(3).Result;
 
                 Console.WriteLine("---------------- Get single stock price and show it ---------------------------");
 
@@ -53,7 +53,7 @@ namespace ConsoleApp
 
                 Console.WriteLine("---------------- Get all stock prices and show them ---------------------------");
 
-                List<Stock> stocks = Controllers.StockPriceController.GetAllStockPrice().Result;
+                List<Stock> stocks = Controllers.StockPriceController.GetAllStockPriceAsync().Result;
                 foreach (IStock item in stocks)
                 {
                     Console.WriteLine("Id       = {0}", item.Id);

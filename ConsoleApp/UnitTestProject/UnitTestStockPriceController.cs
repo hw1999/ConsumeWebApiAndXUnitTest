@@ -9,17 +9,17 @@ namespace UnitTestProject
     public class UnitTestStockPriceController
     {
         [TestMethod]
-        public async Task TestGetStockPriceById()
+        public async Task TestGetStockPriceByIdAsync()
         {   
-            Stock testStock = await ConsoleApp.Controllers.StockPriceController.GetStockPriceById(3) as Stock;
+            Stock testStock = await ConsoleApp.Controllers.StockPriceController.GetStockPriceByIdAsync(3) as Stock;
             Assert.AreEqual(testStock.Id, 3);
             Assert.AreEqual(testStock.Symbol, "SPY");
         }
 
         [TestMethod]
-        public async Task TestGetAllStockPrice()
+        public async Task TestGetAllStockPriceAsync()
         {
-            List<Stock> testStocks = await ConsoleApp.Controllers.StockPriceController.GetAllStockPrice() as List<Stock>;
+            List<Stock> testStocks = await ConsoleApp.Controllers.StockPriceController.GetAllStockPriceAsync() as List<Stock>;
             Assert.AreEqual(testStocks.Count, 3);
             Assert.AreEqual(testStocks[0].Symbol, "FB");
             Assert.AreEqual(testStocks[1].Symbol, "SPY");

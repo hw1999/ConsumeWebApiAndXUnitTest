@@ -12,7 +12,7 @@ namespace ConsoleApp.Controllers
     {        
         //get the stock price by id
         // web api: http://hongwei2008getstockpricewithwebapi.azurewebsites.net/api/StockPrice/3
-        public static async Task<Stock> GetStockPriceById(int id)
+        public static async Task<Stock> GetStockPriceByIdAsync(int id)
         {
             string path = @"http://hongwei2008getstockpricewithwebapi.azurewebsites.net/api/StockPrice/" + id.ToString();
             Stock stock = null;
@@ -28,7 +28,7 @@ namespace ConsoleApp.Controllers
 
         // get all the stock prices 
         // web api: http://hongwei2008getstockpricewithwebapi.azurewebsites.net/api/StockPrice/GetAllStocks
-        public static async Task<List<Stock>> GetAllStockPrice()
+        public static async Task<List<Stock>> GetAllStockPriceAsync()
         {
             string path = @"http://hongwei2008getstockpricewithwebapi.azurewebsites.net/api/StockPrice/GetAllStocks";
             List<Stock> stocks = null;
